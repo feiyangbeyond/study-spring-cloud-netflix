@@ -1,0 +1,17 @@
+plugins {
+    id 'java'
+}
+
+group 'cn.tsxygfy.study'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile('org.springframework.cloud:spring-cloud-starter-netflix-eureka-client')
+    compile('org.springframework.cloud:spring-cloud-starter-openfeign')
+    compile('org.springframework.cloud:spring-cloud-starter-netflix-hystrix-dashboard')
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}

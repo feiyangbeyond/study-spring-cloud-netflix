@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: study-spring-cloud-feign
+server:
+  port: 8081
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8080/eureka/
+  instance:
+    instance-id: ${user.name}-${spring.application.name}:${random.int}
+    prefer-ip-address: true
+#lmp:
+#  service:
+#    key: ${LMP_SERVICE_KEY:f34d878fec274d1fbd5ae44b1b98a2ce}
+#    token: ${LMP_SERVICE_TOKEN:eyJhbGciOiJIUzI1NiJ9.eyJzZXJ2aWNlTmFtZSI6Ijk1OSIsInNlcnZpY2VLZXkiOiJmMzRkODc4ZmVjMjc0ZDFmYmQ1YWU0NGIxYjk4YTJjZSIsInNlcnZpY2VUeXBlIjoiMSIsInNlcnZpY2VBcHAiOiIzOTUiLCJzZXJ2aWNlQ2x1c3RlciI6IjIiLCJqdGkiOiIyYjliZjNlZDU0ZmU0OGE2OTY3ZDE4NGFlODBkNmY3MiIsImlhdCI6MTU2OTIwOTQ4NX0._mc_WkhyKSzWYShPHDULAb_OwZIznejgzATvIePcoRI}
+#eureka:
+#  instance:
+#    instance-id: ${user.name}-${spring.application.name}:${random.int}
+#    prefer-ip-address: true
+#  client:
+#    service-url:
+#      defaultZone: http://${lmp.service.key}:${lmp.service.token}@${EUREKA_URL:eureka-dev.lmp-sy.xpaas.lenovo.com}/eureka
+feign:
+  hystrix:
+    enabled: true
