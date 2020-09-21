@@ -1,4 +1,4 @@
-package cn.tsxygfy.study.cloud.config;
+package cn.tsxygfy.study.cloud.fallback;
 
 import com.netflix.hystrix.contrib.metrics.eventstream.HystrixMetricsStreamServlet;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;

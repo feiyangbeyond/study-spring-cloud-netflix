@@ -1,0 +1,22 @@
+server:
+  port: 8071
+spring:
+  application:
+    name: Zuul-Application
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8080/eureka/
+  instance:
+    instance-id: ${user.name}-${spring.application.name}:${random.int}
+    prefer-ip-address: true
+
+# Zuul
+zuul:
+  routes:
+    api-a:
+      path: /api/a/**
+      serviceId: Feign-Application
+    api-b:
+      path: /api/b/**
+      serviceId: Eureka-Client
