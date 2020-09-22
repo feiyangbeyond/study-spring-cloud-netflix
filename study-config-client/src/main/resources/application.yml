@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: config-client
+  cloud:
+    # 配置服务器的默认端口为 8888，如果修改了默认端口，
+    # 则客户端项目就不能在 application.yml 或 application.properties 中配置 spring.cloud.config.uri，
+    # 必须在 bootstrap.yml 或是 bootstrap.properties 中配置，原因是 bootstrap 开头的配置文件会被优先加载和配置.
+    config:
+      label: master
+      uri: http://localhost:8888
+      name: config-client
+      profile: dev
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8080/eureka/
+  instance:
+    instance-id: ${user.name}-${spring.application.name}:${random.int}
+    prefer-ip-address: true
+server:
+  port: 8889
