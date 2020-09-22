@@ -1,14 +1,13 @@
 spring:
   application:
-    name: study-config-server
+    name: config-server
   cloud:
     config:
       label: master
       server:
         git:
-          uri:
-          search-paths: respo
-
+          uri: https://github.com/feiyangbeyond/study-spring-cloud-netflix.git
+          search-paths: study-config-server/src/main/resources/config
 eureka:
   client:
     serviceUrl:
