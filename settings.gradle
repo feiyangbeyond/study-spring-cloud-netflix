@@ -3,4 +3,5 @@ include 'study-eureka-server'
 include 'study-eureka-client'
 include 'study-feign'
 include 'study-zuul'
+include 'study-config-server'
 
