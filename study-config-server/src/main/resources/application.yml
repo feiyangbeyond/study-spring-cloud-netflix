@@ -6,7 +6,7 @@ spring:
       label: master
       server:
         git:
-          uri: https://github.com/feiyangbeyond/study-spring-cloud-netflix.git
+          uri: https://github.com/feiyangbeyond/study-spring-cloud-netflix
           search-paths: config-repo
 eureka:
   client:
